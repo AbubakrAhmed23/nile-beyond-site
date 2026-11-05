@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nile &amp; Beyond Travel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Nile & Beyond Travel & Air Logistics: flights, travel packages, visas, hotels, Istanbul tours, weekly air cargo from Türkiye to East Africa, wholesale sourcing and medical tourism.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: brand-green corporate site in the mockup's order (hero → services → why us → CTA → footer), with a WhatsApp quote builder as the main conversion point. Single light look, deliberately matched to the logo. */
+:root{
+  color-scheme:light;
+  --forest:#0B2A1B;      /* logo dark */
+  --forest-2:#13402B;
+  --lime:#A6C51A;        /* logo accent */
+  --lime-ink:#5F7409;    /* lime readable on white */
+  --sun:#F6C33B;         /* sunset in hero only */
+  --bg:#FFFFFF; --mist:#F1F5EE; --ink:#0F1F17; --muted:#536359; --line:#DDE5DA;
+  --wa:#1DA851;
+  --display:"Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--forest)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0;letter-spacing:-.02em}
+.kicker{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lime-ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:700 1rem var(--display);text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,filter .15s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-lime{background:var(--lime);color:var(--forest)}
+.btn-forest{background:var(--forest);color:#fff}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-outline{border-color:rgba(255,255,255,.7);color:#fff}
+.ico{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* Top bar */
+.topbar{background:var(--forest);color:#DCE8D8;font-size:.85rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:1rem;padding-block:.45rem;flex-wrap:wrap}
+.topbar a{text-decoration:none}
+.topbar a:hover{color:#fff}
+.topbar span{display:inline-flex;align-items:center;gap:.4rem}
+@media (max-width:640px){.topbar .hide-sm{display:none}}
+
+/* Header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:1.25rem;padding-block:.7rem}
+.logo img{display:block;height:46px;width:auto}
+.flags{display:flex;align-items:center;gap:.4rem;padding-left:1rem;border-left:1px solid var(--line)}
+.flags svg{width:34px;height:23px;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.links{display:flex;gap:1.4rem;margin-left:auto;font-weight:600;font-size:.95rem}
+.links a{text-decoration:none;color:var(--ink);padding-block:.3rem;border-bottom:2px solid transparent}
+.links a:hover{border-color:var(--lime)}
+.nav .btn{padding:.65rem 1.1rem;font-size:.92rem}
+@media (max-width:980px){.links{display:none}.nav .btn{margin-left:auto}}
+@media (max-width:520px){.flags{display:none}.logo img{height:38px}.nav .btn span{display:none}.nav .btn{padding:.65rem}}
+
+/* Hero */
+.hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(180deg,#0B2A1B 0%,#174A31 38%,#C9803A 78%,#F6C33B 100%)}
+.hero .wrap{position:relative;z-index:2;padding-block:clamp(3rem,7vw,5.5rem) clamp(9rem,18vw,13rem)}
+.hero .kicker{color:var(--lime)}
+.hero h1{font-size:clamp(2.4rem,6vw,4.6rem);font-weight:800;margin-block:.9rem 1rem;max-width:15ch}
+.hero h1 span{color:var(--lime)}
+.hero p{font-size:clamp(1.05rem,2vw,1.25rem);max-width:36rem;margin:0 0 1.8rem;color:#E7F0E3}
+.hero .cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.script{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:clamp(2rem,5vw,3.5rem);font-family:var(--display);font-weight:800;font-style:italic;font-size:clamp(1rem,2.2vw,1.6rem);line-height:1.2;text-align:right;color:#fff;transform:rotate(-6deg);opacity:.95}
+.script::after{content:"";display:block;height:4px;width:70%;margin:.5rem 0 0 auto;background:var(--sun);border-radius:4px}
+@media (max-width:760px){.script{display:none}}
+.skyline{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;z-index:1;display:block}
+.plane-fly{position:absolute;z-index:1;top:22%;right:6%;width:clamp(120px,18vw,220px);animation:drift 7s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translate(0,0) rotate(-8deg)}50%{transform:translate(-18px,-10px) rotate(-6deg)}}
+@media (prefers-reduced-motion:reduce){.plane-fly{animation:none}}
+@media (max-width:760px){.plane-fly{top:auto;bottom:34%;right:4%;opacity:.9}}
+
+/* Quick quote */
+.quote-wrap{position:relative;z-index:3;margin-top:-4.5rem}
+.quote{background:#fff;border-radius:20px;box-shadow:0 24px 60px -24px rgba(11,42,27,.35);border:1px solid var(--line);padding:1.4rem;display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:1rem;align-items:end}
+.quote>*{min-width:0}
+.quote h2{grid-column:1/-1;font-size:1.15rem;display:flex;align-items:center;gap:.6rem}
+.quote h2 small{font:500 .9rem var(--body);color:var(--muted);letter-spacing:0}
+label{display:block;font-weight:600;font-size:.82rem;color:var(--muted);margin-bottom:.35rem}
+select,input,textarea{width:100%;font:500 1rem var(--body);color:var(--ink);background:var(--mist);border:1.5px solid var(--line);border-radius:12px;padding:.75rem .85rem}
+select:focus,input:focus,textarea:focus{outline:none;border-color:var(--lime);background:#fff}
+.quote .full{grid-column:1/-1}
+.preview{grid-column:1/-1;font-size:.88rem;color:var(--muted);background:var(--mist);border-radius:12px;padding:.7rem .9rem;border-left:3px solid var(--wa);overflow-wrap:anywhere}
+.preview b{color:var(--ink)}
+@media (max-width:900px){.quote{grid-template-columns:1fr 1fr}.quote .send{grid-column:1/-1}}
+@media (max-width:520px){.quote{grid-template-columns:1fr}}
+
+/* Sections */
+section{padding-block:clamp(3.5rem,7vw,6rem)}
+.head{max-width:44rem;margin-bottom:2.4rem}
+.head h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;margin-top:.6rem}
+.head p{color:var(--muted);margin:.8rem 0 0}
+
+/* Services */
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.group{min-width:0;background:var(--mist);border-radius:22px;padding:1.5rem 1.3rem 1.3rem}
+.group-title{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin-bottom:1rem}
+.group-title h3{font-size:1.25rem;font-weight:800}
+.group-title span{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lime-ink)}
+.svc{display:grid;grid-template-columns:auto 1fr auto;gap:.9rem;align-items:center;padding:.95rem .9rem;background:#fff;border-radius:14px;text-decoration:none;border:1px solid transparent;transition:border-color .15s ease,transform .15s ease}
+.svc+.svc{margin-top:.6rem}
+.svc:hover{border-color:var(--lime);transform:translateX(2px)}
+.svc>*{min-width:0}
+.svc .ic{width:44px;height:44px;border-radius:12px;background:var(--forest);color:var(--lime);display:grid;place-items:center}
+.svc .ic .ico{width:24px;height:24px}
+.svc b{display:block;font-family:var(--display);font-size:1rem;line-height:1.25}
+.svc small{display:block;color:var(--muted);font-size:.86rem;line-height:1.4;margin-top:.15rem}
+.svc .go{color:var(--wa)}
+.svc .go svg{width:20px;height:20px;display:block}
+@media (max-width:980px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.groups{grid-template-columns:1fr}}
+
+/* Cargo band */
+.cargo{background:var(--forest);color:#fff;border-radius:26px;padding:clamp(1.6rem,4vw,2.8rem);display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;align-items:center;overflow:hidden;position:relative}
+.cargo>*{min-width:0}
+.cargo .kicker{color:var(--lime)}
+.cargo h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-block:.6rem .8rem}
+.cargo p{color:#CFDDCB;margin:0 0 1.4rem;max-width:32rem}
+.lane{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:1.4rem}
+.lane-route{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem}
+.lane-code{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,2.8rem);line-height:1}
+.lane-city{font-size:.82rem;color:#B9CCB5;margin-top:.25rem}
+.lane-path{position:relative;height:24px}
+.lane-path::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed rgba(255,255,255,.35)}
+.lane-path svg{position:absolute;left:50%;top:50%;width:26px;height:26px;transform:translate(-50%,-50%);color:var(--lime)}
+.lane-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.3rem;padding-top:1.1rem;border-top:1px dashed rgba(255,255,255,.25)}
+.lane-meta small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9FB79A}
+.lane-meta b{font-family:var(--display);font-size:.98rem}
+@media (max-width:860px){.cargo{grid-template-columns:1fr}}
+
+/* Destinations */
+.dests{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.dest{min-width:0;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column}
+.dest .art{aspect-ratio:16/10;max-width:100%;display:block;width:100%}
+.dest .txt{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.dest h3{font-size:1.2rem;font-weight:800}
+.dest p{margin:0;color:var(--muted);font-size:.95rem;flex:1}
+.dest a{font-weight:700;color:var(--lime-ink);text-decoration:none;font-family:var(--display);font-size:.92rem;margin-top:.4rem}
+.dest a:hover{text-decoration:underline}
+@media (max-width:860px){.dests{grid-template-columns:1fr}}
+
+/* Why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.why>div{min-width:0;padding:1.3rem;border-radius:18px;border:1px solid var(--line)}
+.why .ck{width:40px;height:40px;border-radius:50%;background:var(--lime);color:var(--forest);display:grid;place-items:center;margin-bottom:.9rem}
+.why .ck svg{width:22px;height:22px}
+.why h3{font-size:1.1rem;font-weight:800;margin-bottom:.35rem}
+.why p{margin:0;color:var(--muted);font-size:.95rem}
+@media (max-width:980px){.why{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.why{grid-template-columns:1fr}}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;padding:0;margin:0;counter-reset:s}
+.steps li{list-style:none;min-width:0;position:relative;padding-top:.2rem}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--forest);color:var(--lime);font:800 1.1rem var(--display);margin-bottom:.8rem}
+.steps h3{font-size:1.1rem;font-weight:800;margin-bottom:.3rem}
+.steps p{margin:0;color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* CTA band */
+.band{background:linear-gradient(100deg,var(--forest) 0%,var(--forest-2) 100%);color:#fff}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding-block:2.4rem}
+.band h2{font-size:clamp(1.6rem,3.6vw,2.3rem);font-weight:800}
+.band p{margin:.3rem 0 0;color:#CFDDCB}
+
+/* Footer */
+footer{background:#071C12;color:#C3D3BF;font-size:.93rem}
+.foot{display:grid;grid-template-columns:1.4fr 1.2fr 1fr;gap:2rem;padding-block:3rem 2rem}
+.foot>*{min-width:0}
+.foot img{height:52px;width:auto;display:block;margin-bottom:1rem}
+.foot h4{font-family:var(--display);color:#fff;font-size:1rem;margin:0 0 .8rem}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:.55rem}
+.foot a{text-decoration:none}
+.foot a:hover{color:#fff}
+.contact-line{display:flex;gap:.6rem;align-items:flex-start;overflow-wrap:anywhere}
+.contact-line svg{width:18px;height:18px;flex:none;margin-top:.2rem;color:var(--lime)}
+.copy{font:600 .78rem var(--body);background:transparent;color:var(--lime);border:1px solid rgba(166,197,26,.5);border-radius:999px;padding:.15rem .6rem;cursor:pointer;margin-left:.3rem}
+.legal{border-top:1px solid rgba(255,255,255,.1);padding-block:1.1rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.82rem;color:#8FA58A}
+@media (max-width:860px){.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
+@media (max-width:520px){.foot{grid-template-columns:1fr}}
+
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:6;width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.4)}
+.fab svg{width:32px;height:32px}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.23 8.23 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29Z"/></symbol>
+  <symbol id="plane" viewBox="0 0 24 24"><path fill="currentColor" d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z" transform="rotate(90 12 12)"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3.5 6.5 12 13l8.5-6.5" stroke="currentColor" stroke-width="1.8" fill="none"/></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="hide-sm"><svg width="15" height="15"><use href="#pin"/></svg>İstanbul, Türkiye</span>
+    <span>
+      <a data-wa="Hello Nile & Beyond, I would like more information." href="https://wa.me/905011506205" target="_blank" rel="noopener">WhatsApp +90 501 150 6205</a>
+      <span class="hide-sm">&nbsp;·&nbsp; nilebeyondtravel@gmail.com</span>
+    </span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Nile & Beyond home"><img src="assets/logo.png" alt="Nile & Beyond Travel & Air Logistics"></a>
+    <div class="flags" aria-label="Uganda and Türkiye">
+      <svg viewBox="0 0 36 24" role="img" aria-label="Uganda flag"><rect width="36" height="4" fill="#000"/><rect y="4" width="36" height="4" fill="#FCDC04"/><rect y="8" width="36" height="4" fill="#D90000"/><rect y="12" width="36" height="4" fill="#000"/><rect y="16" width="36" height="4" fill="#FCDC04"/><rect y="20" width="36" height="4" fill="#D90000"/><circle cx="18" cy="12" r="5" fill="#fff"/><circle cx="18" cy="12" r="1.8" fill="#9CA69C"/></svg>
+      <svg viewBox="0 0 36 24" role="img" aria-label="Türkiye flag"><rect width="36" height="24" fill="#E30A17"/><circle cx="13.5" cy="12" r="6" fill="#fff"/><circle cx="15" cy="12" r="4.8" fill="#E30A17"/><polygon fill="#fff" points="20.2,12 23.9,10.8 21.6,13.9 21.6,10.1 23.9,13.2"/></svg>
+    </div>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#cargo">Air Cargo</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-forest" href="#quote"><span>Get a Quote</span><svg><use href="#arrow"/></svg></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <span class="kicker">Your journey · Our priority</span>
+      <h1>Nile &amp; Beyond <span>Travel &amp; Air Logistics</span></h1>
+      <p>We connect people, businesses and opportunities between Türkiye, Uganda and East Africa. Flights, tours, treatment, sourcing and weekly air cargo, all arranged through one team in Istanbul.</p>
+      <div class="cta">
+        <a class="btn btn-lime" data-wa="Hello Nile & Beyond, I would like to plan a trip to Türkiye." href="https://wa.me/905011506205" target="_blank" rel="noopener">Plan Your Trip<svg><use href="#arrow"/></svg></a>
+        <a class="btn btn-outline" href="#services">Our Services</a>
+      </div>
+    </div>
+    <div class="script" aria-hidden="true">From Türkiye<br>to East Africa<br>and Beyond</div>
+
+    <svg class="plane-fly" viewBox="0 0 220 90" aria-hidden="true">
+      <path d="M8 70 C60 64 110 52 170 30" stroke="rgba(255,255,255,.55)" stroke-width="2" stroke-dasharray="5 7" fill="none"/>
+      <g transform="translate(160 6) rotate(-18)">
+        <path d="M0 22 L52 18 L62 20 L52 24 L0 26 Z" fill="#fff"/>
+        <path d="M22 21 L36 2 L42 2 L34 21 Z" fill="#fff"/>
+        <path d="M22 25 L34 40 L40 40 L34 25 Z" fill="#E8EEE6"/>
+        <path d="M2 22 L-6 12 L0 12 L8 21 Z" fill="#A6C51A"/>
+      </g>
+    </svg>
+
+    <svg class="skyline" viewBox="0 0 1440 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <circle cx="1080" cy="150" r="70" fill="#FCE08A" opacity=".85"/>
+      <g fill="#0B2A1B" opacity=".55">
+        <rect x="0" y="170" width="1440" height="40"/>
+        <path d="M40 170v-30h30v-20h20v20h40v30zM160 170v-45h50v45zM240 170v-60h24v60zM300 170v-35h70v35zM430 170v-50h40v50zM1240 170v-40h60v40zM1330 170v-55h30v55zM1380 170v-30h60v30z"/>
+      </g>
+      <g fill="#0B2A1B">
+        <!-- Galata-style tower -->
+        <path d="M560 175V98l8-6V70l10-20 10 20v22l8 6v77z"/>
+        <!-- grand mosque with six minarets -->
+        <path d="M700 175c0-46 40-78 90-78s90 32 90 78z"/>
+        <path d="M660 175c0-24 20-40 44-40s44 16 44 40zM832 175c0-24 20-40 44-40s44 16 44 40z"/>
+        <rect x="786" y="80" width="8" height="20"/>
+        <path d="M640 175V70l4-14 4 14v105zM932 175V70l4-14 4 14v105zM670 175V92l3-12 3 12v83zM904 175V92l3-12 3 12v83zM616 175V100l3-10 3 10v75zM958 175V100l3-10 3 10v75z"/>
+        <!-- second mosque -->
+        <path d="M1040 175c0-34 28-56 62-56s62 22 62 56z"/>
+        <path d="M1020 175V96l3-12 3 12v79zM1178 175V96l3-12 3 12v79z"/>
+        <rect x="0" y="175" width="1440" height="20"/>
+      </g>
+      <rect x="0" y="195" width="1440" height="65" fill="#0B2A1B"/>
+      <g stroke="#F6C33B" stroke-width="2" opacity=".45">
+        <path d="M980 212h200M1010 228h140M1040 244h80"/>
+      </g>
+      <g stroke="#ffffff" stroke-width="1.5" opacity=".18">
+        <path d="M120 214h160M400 232h120M640 220h180M1260 236h120"/>
+      </g>
+    </svg>
+  </section>
+
+  <div class="wrap quote-wrap" id="quote">
+    <form class="quote" id="quote-form" autocomplete="on">
+      <h2><svg width="22" height="22" style="color:var(--wa)"><use href="#wa"/></svg>Get a quote on WhatsApp <small>Fill in a few details and send them in one tap.</small></h2>
+      <div>
+        <label for="q-service">What do you need?</label>
+        <select id="q-service"></select>
+      </div>
+      <div>
+        <label for="q-name">Your name</label>
+        <input id="q-name" type="text" placeholder="e.g. Sarah Namuli">
+      </div>
+      <div>
+        <label for="q-city">Your city</label>
+        <input id="q-city" type="text" value="Kampala">
+      </div>
+      <a class="btn btn-wa send" id="q-send" href="https://wa.me/905011506205" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Send on WhatsApp</a>
+      <div class="full">
+        <label for="q-details">Details (optional)</label>
+        <input id="q-details" type="text" placeholder="Dates, number of people, product type, cargo weight…">
+      </div>
+      <div class="preview" aria-live="polite"><b>Message preview:</b> <span id="q-preview"></span></div>
+    </form>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Our services</span>
+        <h2>Travel, logistics and business support in one place</h2>
+        <p>Tap any service to start a WhatsApp chat about it. The message is already written for you.</p>
+      </div>
+      <div class="groups" id="groups"></div>
+    </div>
+  </section>
+
+  <section id="cargo" style="padding-top:0">
+    <div class="wrap">
+      <div class="cargo">
+        <div>
+          <span class="kicker">Weekly air cargo</span>
+          <h2>Ship from Türkiye to East Africa every week</h2>
+          <p>Goods bought in Istanbul, wholesale orders and personal parcels travel on regular weekly departures. Message us to confirm routes, dates and rates for your shipment.</p>
+          <a class="btn btn-lime" data-wa="Hello Nile & Beyond, I want to send cargo from Türkiye. Please share the next departure, routes and rates." href="https://wa.me/905011506205" target="_blank" rel="noopener">Book cargo space<svg><use href="#arrow"/></svg></a>
+        </div>
+        <div class="lane" aria-label="Cargo route Istanbul to Entebbe">
+          <div class="lane-route">
+            <div><div class="lane-code">IST</div><div class="lane-city">Istanbul, Türkiye</div></div>
+            <div class="lane-path" aria-hidden="true"><svg><use href="#plane"/></svg></div>
+            <div style="text-align:right"><div class="lane-code">EBB</div><div class="lane-city">Entebbe, Uganda</div></div>
+          </div>
+          <div class="lane-meta">
+            <div><small>Frequency</small><b>Weekly</b></div>
+            <div><small>Region</small><b>East Africa</b></div>
+            <div><small>Routes</small><b>On request</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="destinations" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Destinations</span>
+        <h2>Where we take you</h2>
+      </div>
+      <div class="dests">
+        <article class="dest">
+          <svg class="art" viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#F6C33B"/><rect y="0" width="320" height="120" fill="#F2A54A"/><circle cx="230" cy="96" r="34" fill="#FCE08A"/><path d="M60 150c0-30 24-50 56-50s56 20 56 50z M40 150V80l3-10 3 10v70z M186 150V80l3-10 3 10v70z" fill="#0B2A1B"/><rect x="112" y="88" width="6" height="14" fill="#0B2A1B"/><path d="M240 150V96l6-5V78l7-13 7 13v13l6 5v54z" fill="#0B2A1B"/><rect y="150" width="320" height="50" fill="#13402B"/><path d="M30 170h90M180 182h100" stroke="#F6C33B" stroke-width="3" opacity=".6"/></svg>
+          <div class="txt"><h3>Istanbul</h3><p>City tours with a guide, hotels, shopping districts, business meetings and hospital visits.</p><a data-wa="Hello, I'd like to plan a visit to Istanbul." href="https://wa.me/905011506205" target="_blank" rel="noopener">Plan Istanbul →</a></div>
+        </article>
+        <article class="dest">
+          <svg class="art" viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#CFE6F2"/><path d="M0 150 L50 110 L90 140 L140 96 L190 140 L240 104 L320 150 V200 H0Z" fill="#D9A877"/><path d="M0 170 L60 140 L120 168 L180 136 L250 166 L320 146 V200 H0Z" fill="#B97F52"/><g><ellipse cx="90" cy="56" rx="22" ry="26" fill="#A6C51A"/><path d="M76 74 L86 92 H94 L104 74" fill="none" stroke="#0B2A1B" stroke-width="2"/><rect x="85" y="92" width="10" height="8" fill="#0B2A1B"/></g><g><ellipse cx="210" cy="40" rx="16" ry="19" fill="#E3683A"/><path d="M200 53 L207 66 H213 L220 53" fill="none" stroke="#0B2A1B" stroke-width="1.6"/><rect x="206" y="66" width="8" height="6" fill="#0B2A1B"/></g><g><ellipse cx="262" cy="78" rx="11" ry="13" fill="#F6C33B"/><rect x="258" y="96" width="7" height="5" fill="#0B2A1B"/></g></svg>
+          <div class="txt"><h3>Travel packages in Türkiye</h3><p>Holidays, city breaks and custom itineraries planned around your dates and budget.</p><a data-wa="Hello, I'm interested in a travel package in Türkiye." href="https://wa.me/905011506205" target="_blank" rel="noopener">See packages →</a></div>
+        </article>
+        <article class="dest">
+          <svg class="art" viewBox="0 0 320 200" aria-hidden="true"><rect width="320" height="200" fill="#F2C46A"/><circle cx="90" cy="110" r="44" fill="#F7E0A0"/><rect y="140" width="320" height="60" fill="#8C9A3A"/><path d="M0 150 Q160 132 320 150 V200 H0Z" fill="#6E7D2A"/><g fill="#0B2A1B"><rect x="214" y="78" width="6" height="66"/><path d="M168 80 Q217 50 266 80 Q240 72 217 76 Q194 72 168 80Z"/><path d="M182 92 Q217 70 252 92 Q234 86 217 88 Q200 86 182 92Z"/><path d="M40 146c4-14 18-22 34-22h28c10 0 16 8 16 16v8h-8v-6h-6v6h-10v-6h-30v6h-10v-6h-6v6h-8z"/><path d="M116 132c6-2 10 2 10 8v10" stroke="#0B2A1B" stroke-width="3" fill="none"/></g></svg>
+          <div class="txt"><h3>Safari trips to Africa</h3><p>Wildlife and nature trips in East Africa for travellers visiting from Türkiye and beyond.</p><a data-wa="Hello, I'd like information about a safari trip to Africa." href="https://wa.me/905011506205" target="_blank" rel="noopener">Ask about safaris →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" style="background:var(--mist)">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Why choose us</span>
+        <h2>One trusted team between Türkiye and Africa</h2>
+        <p>We combine local knowledge in Istanbul with personal service on WhatsApp, so you always know who is handling your plans.</p>
+      </div>
+      <div class="why">
+        <div><span class="ck"><svg><use href="#check"/></svg></span><h3>Trusted &amp; reliable</h3><p>Clear communication and every step agreed with you before it happens.</p></div>
+        <div><span class="ck"><svg><use href="#check"/></svg></span><h3>Competitive prices</h3><p>Options compared for you across airlines, hotels, suppliers and cargo.</p></div>
+        <div><span class="ck"><svg><use href="#check"/></svg></span><h3>Based in Istanbul</h3><p>On the ground where the suppliers, hospitals and hotels are.</p></div>
+        <div><span class="ck"><svg><use href="#check"/></svg></span><h3>One contact for everything</h3><p>Travel, cargo and business support handled in a single chat.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">How it works</span>
+        <h2>From first message to arrival</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Message us</h3><p>Tell us on WhatsApp what you need in Türkiye or Africa.</p></li>
+        <li><h3>Get a quote</h3><p>We go through your dates and requirements and send you the options.</p></li>
+        <li><h3>We arrange it</h3><p>Flights, hotels, hospitals, suppliers or cargo are coordinated for you.</p></li>
+        <li><h3>Travel or receive</h3><p>You travel with everything in place, or your goods arrive in Africa.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="band">
+    <div class="wrap">
+      <div><h2>Let's plan your next journey</h2><p>Whether it's a dream holiday or urgent cargo, we're here to help.</p></div>
+      <a class="btn btn-lime" data-wa="Hello Nile & Beyond, I'd like to plan my next journey." href="https://wa.me/905011506205" target="_blank" rel="noopener">Contact us on WhatsApp<svg><use href="#arrow"/></svg></a>
+    </div>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="wrap foot">
+    <div>
+      <img src="assets/logo-light.png" alt="Nile & Beyond Travel & Air Logistics">
+      <p style="margin:0;max-width:26rem">Travel further, move more, build connections. Your travel and air logistics partner between Türkiye and East Africa.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li class="contact-line"><svg><use href="#pin"/></svg>İstanbul, Türkiye</li>
+        <li class="contact-line"><svg><use href="#wa"/></svg><span><a data-wa="Hello Nile & Beyond!" href="https://wa.me/905011506205" target="_blank" rel="noopener" style="color:#fff;font-weight:600">+90 501 150 6205</a> (Phone / WhatsApp)<button class="copy" id="copy-phone" type="button" data-copy="+905011506205">Copy</button></span></li>
+        <li class="contact-line"><svg><use href="#mail"/></svg><span><span id="mail-val">nilebeyondtravel@gmail.com</span><button class="copy" id="copy-mail" type="button" data-copy="nilebeyondtravel@gmail.com">Copy</button></span></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="#services">Our services</a></li>
+        <li><a href="#cargo">Air cargo</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#quote">Get a quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <span>© 2026 Nile &amp; Beyond Travel &amp; Air Logistics. All rights reserved.</span>
+    <span>Travel further → Move more → Build connections</span>
+  </div>
+</footer>
+
+<a class="fab" data-wa="Hello Nile & Beyond, I would like more information." href="https://wa.me/905011506205" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+const WA = "905011506205";
+const waLink = t => "https://wa.me/" + WA + "?text=" + encodeURIComponent(t);
+
+const I = {
+  plane:'<path d="M2 16l20-8-7 13-3-6-6-2z"/><path d="M12 15l3-4"/>',
+  bag:'<rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V4h6v3M9 11v5M15 11v5"/>',
+  passport:'<rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3.2"/><path d="M8.8 10h6.4M12 6.8c1.4 1.8 1.4 4.6 0 6.4M12 6.8c-1.4 1.8-1.4 4.6 0 6.4M9 17h6"/>',
+  bed:'<path d="M3 18V8M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/>',
+  dome:'<path d="M5 20a7 7 0 0 1 14 0M12 13V9M3 20h18M6 20V12M18 20V12"/><path d="M12 9l-1-2 1-2 1 2z"/>',
+  sun:'<circle cx="12" cy="9" r="3.5"/><path d="M3 20h18M7 20c1-3 3-4 5-4s4 1 5 4M12 2v1.5M5 5l1 1M19 5l-1 1"/>',
+  box:'<path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/>',
+  truck:'<path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>',
+  cart:'<path d="M3 4h2l2.4 11h10.2L20 7H6.2"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/>',
+  brief:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/>',
+  crate:'<path d="M4 4h16v16H4zM4 9h16M4 15h16M9 4v16"/>',
+  heart:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/><path d="M8 11h2l1-2 2 4 1-2h2"/>'
+};
+
+const GROUPS = [
+  {name:"Travel", tag:"Trips & stays", items:[
+    ["plane","Flight bookings","Fares and routes between Africa, Türkiye and worldwide."],
+    ["bag","Travel packages","Holidays, city breaks and custom itineraries."],
+    ["passport","Visa assistance","Guidance on documents and the application process."],
+    ["bed","Hotel booking","Stays that fit your trip, budget and location."]
+  ]},
+  {name:"Tours & care", tag:"In Türkiye & Africa", items:[
+    ["dome","Istanbul city tours & guide","Explore the city with tour and guide services."],
+    ["sun","Safari trips to Africa","Wildlife and nature trips in East Africa."],
+    ["heart","Medical tourism","Appointments, treatment and hospital coordination."],
+    ["brief","Business & investment","Support for exploring opportunities in Türkiye."]
+  ]},
+  {name:"Logistics", tag:"Goods & cargo", items:[
+    ["box","Weekly air cargo","Regular departures from Türkiye to Africa."],
+    ["truck","Freight forwarding","Logistics handled end to end for your business."],
+    ["crate","Wholesale sourcing","Connect with Turkish suppliers and products."],
+    ["cart","Online shopping","We buy from Turkish stores and ship it to you."]
+  ]}
+];
+
+const groupsEl = document.getElementById("groups");
+const sel = document.getElementById("q-service");
+GROUPS.forEach(g => {
+  const div = document.createElement("div");
+  div.className = "group";
+  div.innerHTML = `<div class="group-title"><h3>${g.name}</h3><span>${g.tag}</span></div>`;
+  const og = document.createElement("optgroup"); og.label = g.name;
+  g.items.forEach(([ic, title, desc]) => {
+    const a = document.createElement("a");
+    a.className = "svc"; a.target = "_blank"; a.rel = "noopener";
+    a.href = waLink(`Hello Nile & Beyond, I'm interested in: ${title}. Could you share more details?`);
+    a.innerHTML = `<span class="ic"><svg class="ico" viewBox="0 0 24 24">${I[ic]}</svg></span><span><b>${title}</b><small>${desc}</small></span><span class="go" aria-hidden="true"><svg><use href="#wa"/></svg></span>`;
+    a.setAttribute("aria-label", `${title}: ask on WhatsApp`);
+    div.appendChild(a);
+    const o = document.createElement("option"); o.textContent = title; og.appendChild(o);
+  });
+  groupsEl.appendChild(div); sel.appendChild(og);
+});
+
+document.querySelectorAll("[data-wa]").forEach(a => a.href = waLink(a.dataset.wa));
+
+const f = id => document.getElementById(id);
+function buildQuote(){
+  const name = f("q-name").value.trim(), city = f("q-city").value.trim(), det = f("q-details").value.trim();
+  let m = `Hello Nile & Beyond, I'd like a quote for: ${sel.value}.`;
+  if (name) m += ` My name is ${name}.`;
+  if (city) m += ` I'm in ${city}.`;
+  if (det) m += ` Details: ${det}`;
+  f("q-preview").textContent = m;
+  f("q-send").href = waLink(m);
+}
+["q-service","q-name","q-city","q-details"].forEach(id => f(id).addEventListener("input", buildQuote));
+f("quote-form").addEventListener("submit", e => e.preventDefault());
+buildQuote();
+
+document.querySelectorAll(".copy").forEach(btn => btn.addEventListener("click", () => {
+  const t = btn.dataset.copy, l = btn.textContent;
+  const ok = () => { btn.textContent = "Copied"; setTimeout(() => btn.textContent = l, 1500); };
+  const no = () => { btn.textContent = "Select & copy"; setTimeout(() => btn.textContent = l, 2000); };
+  try { navigator.clipboard.writeText(t).then(ok, no); } catch (e) { no(); }
+}));
+</script>
+
+</body>
+</html>
