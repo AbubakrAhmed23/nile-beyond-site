@@ -3,9 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nile &amp; Beyond Travel</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Nile & Beyond Travel & Air Logistics: flights, travel packages, visas, hotels, Istanbul tours, weekly air cargo from Türkiye to East Africa, wholesale sourcing and medical tourism.">
+<title>Flights, Visas &amp; Air Cargo: Türkiye ⇄ Uganda | Nile &amp; Beyond</title>
+<meta name="description" content="Flights, visas, hotels, Istanbul tours, medical tourism and weekly air cargo between Türkiye and East Africa. One team in Istanbul, quotes on WhatsApp.">
+<link rel="canonical" href="https://nile-beyond-site.vercel.app/">
+<meta name="theme-color" content="#0B2A1B">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<!-- Icons -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<!-- Social sharing (WhatsApp, Facebook, LinkedIn, X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nile &amp; Beyond Travel &amp; Air Logistics">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://nile-beyond-site.vercel.app/">
+<meta property="og:title" content="Flights, Visas &amp; Weekly Air Cargo — Türkiye ⇄ East Africa">
+<meta property="og:description" content="Travel packages, Istanbul tours, medical tourism, wholesale sourcing and weekly air cargo. One team in Istanbul, quotes on WhatsApp.">
+<meta property="og:image" content="https://nile-beyond-site.vercel.app/assets/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nile &amp; Beyond Travel &amp; Air Logistics — flights, visas and weekly air cargo between Türkiye and East Africa">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Flights, Visas &amp; Weekly Air Cargo — Türkiye ⇄ East Africa">
+<meta name="twitter:description" content="Travel packages, Istanbul tours, medical tourism, wholesale sourcing and weekly air cargo. One team in Istanbul, quotes on WhatsApp.">
+<meta name="twitter:image" content="https://nile-beyond-site.vercel.app/assets/og-image.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Figtree:wght@400;500;600&display=swap">
@@ -24,7 +49,7 @@
   --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--forest)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:6px}
@@ -58,7 +83,27 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgb
 .links a{text-decoration:none;color:var(--ink);padding-block:.3rem;border-bottom:2px solid transparent}
 .links a:hover{border-color:var(--lime)}
 .nav .btn{padding:.65rem 1.1rem;font-size:.92rem}
-@media (max-width:980px){.links{display:none}.nav .btn{margin-left:auto}}
+
+/* Mobile menu toggle: hidden on desktop, reveals .links as a dropdown below 980px */
+.menu-btn{display:none;align-items:center;justify-content:center;flex:none;width:44px;height:44px;margin-left:.5rem;padding:0;background:#fff;color:var(--forest);border:1.5px solid var(--line);border-radius:12px;cursor:pointer}
+.menu-btn:hover{border-color:var(--lime)}
+.menu-btn svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.menu-btn svg path{transform-box:view-box;transform-origin:center;transition:transform .2s ease,opacity .15s ease}
+.menu-btn[aria-expanded="true"] .l1{transform:translateY(5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] .l2{opacity:0}
+.menu-btn[aria-expanded="true"] .l3{transform:translateY(-5px) rotate(-45deg)}
+@media (prefers-reduced-motion:reduce){.menu-btn svg path{transition:none}}
+
+@media (max-width:980px){
+  .menu-btn{display:inline-flex}
+  header .wrap{position:relative}
+  .nav .btn{margin-left:auto}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;z-index:20;flex-direction:column;gap:0;margin:0;padding:.2rem max(16px,env(safe-area-inset-left,0px)) .8rem;background:#fff;border-top:1px solid var(--line);box-shadow:0 22px 34px -20px rgba(11,42,27,.45)}
+  .links.open{display:flex}
+  .links a{padding:.95rem .2rem;font-size:1rem;border-bottom:1px solid var(--line);border-left:3px solid transparent;padding-left:.7rem}
+  .links a:last-child{border-bottom:0}
+  .links a:hover{border-bottom-color:var(--line);border-left-color:var(--lime)}
+}
 @media (max-width:520px){.flags{display:none}.logo img{height:38px}.nav .btn span{display:none}.nav .btn{padding:.65rem}}
 
 /* Hero */
@@ -191,6 +236,77 @@ footer{background:#071C12;color:#C3D3BF;font-size:.93rem}
 .fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:6;width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.4)}
 .fab svg{width:32px;height:32px}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "@id": "https://nile-beyond-site.vercel.app/#organization",
+  "name": "Nile & Beyond Travel & Air Logistics",
+  "alternateName": "Nile & Beyond",
+  "url": "https://nile-beyond-site.vercel.app/",
+  "logo": "https://nile-beyond-site.vercel.app/assets/logo.png",
+  "image": "https://nile-beyond-site.vercel.app/assets/og-image.jpg",
+  "description": "Flights, visas, hotels, Istanbul tours, medical tourism, wholesale sourcing and weekly air cargo between Türkiye and East Africa.",
+  "slogan": "Travel further, move more, build connections.",
+  "telephone": "+90-501-150-6205",
+  "email": "nilebeyondtravel@gmail.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "İstanbul",
+    "addressCountry": "TR"
+  },
+  "areaServed": [
+    { "@type": "Country", "name": "Türkiye" },
+    { "@type": "Country", "name": "Uganda" },
+    { "@type": "Place", "name": "East Africa" }
+  ],
+  "knowsLanguage": ["en", "tr"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+90-501-150-6205",
+    "email": "nilebeyondtravel@gmail.com",
+    "availableLanguage": ["English", "Turkish"]
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Travel, tours and logistics services",
+    "itemListElement": [
+      { "@type": "OfferCatalog", "name": "Travel", "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flight bookings", "description": "Fares and routes between Africa, Türkiye and worldwide." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Travel packages", "description": "Holidays, city breaks and custom itineraries." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Visa assistance", "description": "Guidance on documents and the application process." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hotel booking", "description": "Stays that fit your trip, budget and location." } }
+      ]},
+      { "@type": "OfferCatalog", "name": "Tours & care", "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Istanbul city tours & guide", "description": "Explore the city with tour and guide services." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Safari trips to Africa", "description": "Wildlife and nature trips in East Africa." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Medical tourism", "description": "Appointments, treatment and hospital coordination." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business & investment support", "description": "Support for exploring opportunities in Türkiye." } }
+      ]},
+      { "@type": "OfferCatalog", "name": "Logistics", "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Weekly air cargo", "description": "Regular weekly departures from Türkiye to East Africa." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Freight forwarding", "description": "Logistics handled end to end for your business." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wholesale sourcing", "description": "Connect with Turkish suppliers and products." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Online shopping & buying service", "description": "We buy from Turkish stores and ship it to you." } }
+      ]}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://nile-beyond-site.vercel.app/#website",
+  "url": "https://nile-beyond-site.vercel.app/",
+  "name": "Nile & Beyond Travel & Air Logistics",
+  "inLanguage": "en",
+  "publisher": { "@id": "https://nile-beyond-site.vercel.app/#organization" }
+}
+</script>
 </head>
 <body>
 
@@ -221,7 +337,7 @@ footer{background:#071C12;color:#C3D3BF;font-size:.93rem}
       <svg viewBox="0 0 36 24" role="img" aria-label="Uganda flag"><rect width="36" height="4" fill="#000"/><rect y="4" width="36" height="4" fill="#FCDC04"/><rect y="8" width="36" height="4" fill="#D90000"/><rect y="12" width="36" height="4" fill="#000"/><rect y="16" width="36" height="4" fill="#FCDC04"/><rect y="20" width="36" height="4" fill="#D90000"/><circle cx="18" cy="12" r="5" fill="#fff"/><circle cx="18" cy="12" r="1.8" fill="#9CA69C"/></svg>
       <svg viewBox="0 0 36 24" role="img" aria-label="Türkiye flag"><rect width="36" height="24" fill="#E30A17"/><circle cx="13.5" cy="12" r="6" fill="#fff"/><circle cx="15" cy="12" r="4.8" fill="#E30A17"/><polygon fill="#fff" points="20.2,12 23.9,10.8 21.6,13.9 21.6,10.1 23.9,13.2"/></svg>
     </div>
-    <nav class="links" aria-label="Main">
+    <nav class="links" id="main-nav" aria-label="Main">
       <a href="#services">Services</a>
       <a href="#cargo">Air Cargo</a>
       <a href="#destinations">Destinations</a>
@@ -229,6 +345,9 @@ footer{background:#071C12;color:#C3D3BF;font-size:.93rem}
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn btn-forest" href="#quote"><span>Get a Quote</span><svg><use href="#arrow"/></svg></a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg>
+    </button>
   </div>
 </header>
 
@@ -512,6 +631,19 @@ function buildQuote(){
 ["q-service","q-name","q-city","q-details"].forEach(id => f(id).addEventListener("input", buildQuote));
 f("quote-form").addEventListener("submit", e => e.preventDefault());
 buildQuote();
+
+const menuBtn = f("menu-btn"), mainNav = f("main-nav");
+const setMenu = open => {
+  mainNav.classList.toggle("open", open);
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+};
+menuBtn.addEventListener("click", () => setMenu(!mainNav.classList.contains("open")));
+mainNav.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+document.addEventListener("click", e => {
+  if (!mainNav.contains(e.target) && !menuBtn.contains(e.target)) setMenu(false);
+});
 
 document.querySelectorAll(".copy").forEach(btn => btn.addEventListener("click", () => {
   const t = btn.dataset.copy, l = btn.textContent;

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nile &amp; Beyond">
+  <rect width="64" height="64" rx="14" fill="#0B2A1B"/>
+  <g fill="none" stroke="#F1F5EE" stroke-width="2.3" stroke-linecap="round">
+    <circle cx="30" cy="34" r="16"/>
+    <ellipse cx="30" cy="34" rx="6.6" ry="16"/>
+    <path d="M15 28.5h30M15 39.5h30"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M6 48C18 50 34 40 46 24" stroke="#0B2A1B" stroke-width="8.5"/>
+    <path d="M6 48C18 50 34 40 46 24" stroke="#A6C51A" stroke-width="3.4"/>
+  </g>
+  <g transform="translate(47 10) rotate(32)" fill="#A6C51A">
+    <path d="M0 6.2 14 4.6 17 6 14 7.4 0 8.4 2.4 6.9z"/>
+    <path d="M4.6 5.6 9.6 0h2.2L8.6 5.6zM4.6 7.4 9.6 13h2.2L8.6 7.4z"/>
+  </g>
+</svg>
